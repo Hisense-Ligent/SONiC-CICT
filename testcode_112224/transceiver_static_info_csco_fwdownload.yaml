@@ -1,0 +1,51 @@
+# transceiver_static_info.yaml
+#
+# A file transceiver_static_info.yaml should be present to describe the metadata of the transceiver.
+# Following should be the format of the file
+#    topology:
+#        <device_name>:
+#            <port_name>:
+#                active_firmware: <active_firmware_version>
+#                inactive_firmware: <inactive_firmware_version>
+#                cmis_rev: <cmis_revision>
+#                vendor_date: <vendor_date_code>
+#                vendor_name: <vendor_name>
+#                vendor_oui: <vendor_oui>
+#                vendor_pn: <part_number>
+#                vendor_rev: <revision_number>
+#                vendor_sn: <serial_number>
+#                dual_bank_support: <yes_or_no>
+#
+topology:
+    Cisco-8101-O8C48:
+        Ethernet16:
+            # 2x100G AOC (200G end, connected to 100G A)
+            active_firmware: '0.6.0'
+            inactive_firmware: '1.7.0'
+            cmis_rev: '5.2'
+            vendor_date: '2023-02-27'
+            vendor_name: 'Hisense'
+            vendor_oui: 'ac-4a-fe'
+            vendor_pn: 'DEF8504-2C06-MB3'
+            vendor_rev: '02'
+            vendor_sn: 'VEMCAG6Z001'
+            dual_bank_support: no
+            firmware_valid_image_ver: '1.7.0'
+            firmware_valid_image: 'DEF8504_V029578_20240202_0107_MergeHex.bin'
+            #firmware_valid_image_ver: '2.7.0'
+            #firmware_valid_image: 'DEF8504_V029578_20240202_0207_MergeHex.bin'
+
+        Ethernet20:
+            # 2x100G AOC (200G end, connected to 100G B)
+            active_firmware: '0.6.0'
+            inactive_firmware: '1.7.0'
+            cmis_rev: '5.2'
+            vendor_date: '2023-02-27'
+            vendor_name: 'Hisense'
+            vendor_oui: 'ac-4a-fe'
+            vendor_pn: 'DEF8504-2C06-MB3'
+            vendor_rev: '02'
+            vendor_sn: 'VEMCAG6Z001'
+            dual_bank_support: no
+            #firmware_valid_image_ver: ''
+            #firmware_valid_image: ''

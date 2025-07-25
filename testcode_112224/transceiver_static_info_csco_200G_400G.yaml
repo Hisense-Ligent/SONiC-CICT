@@ -1,0 +1,71 @@
+# transceiver_static_info.yaml
+#
+# A file transceiver_static_info.yaml should be present to describe the metadata of the transceiver.
+# Following should be the format of the file
+#    topology:
+#        <device_name>:
+#            <port_name>:
+#                active_firmware: <active_firmware_version>
+#                inactive_firmware: <inactive_firmware_version>
+#                cmis_rev: <cmis_revision>
+#                vendor_date: <vendor_date_code>
+#                vendor_name: <vendor_name>
+#                vendor_oui: <vendor_oui>
+#                vendor_pn: <part_number>
+#                vendor_rev: <revision_number>
+#                vendor_sn: <serial_number>
+#                dual_bank_support: <yes_or_no>
+#
+topology:
+    Cisco-8101-O8C48:
+        Ethernet0:
+            # 2x100G AOC (200G end, connected to 100G A)
+            active_firmware: '0.5.0'
+            inactive_firmware: '9.3.0'
+            cmis_rev: '5.2'
+            vendor_date: '2023-11-20'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DEF8504-2C02-MB3
+            vendor_rev: '02'
+            vendor_sn: VEMDBT02003
+            dual_bank_support: no
+
+        Ethernet4:
+            # 2x100G AOC (200G end, connected to 100G B)
+            active_firmware: '0.5.0'
+            inactive_firmware: '9.3.0'
+            cmis_rev: '5.2'
+            vendor_date: '2023-11-20'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DEF8504-2C02-MB3
+            vendor_rev: '02'
+            vendor_sn: VEMDBT02003
+            dual_bank_support: no
+
+        Ethernet96:
+            # 400G AOC 
+            active_firmware: '3.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '5.0'
+            vendor_date: '2020-09-17'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DMQ8811A-EC03
+            vendor_rev: '02'
+            vendor_sn: UW4D2G00001
+            dual_bank_support: no
+
+        Ethernet104:
+            # 400G AOC 
+            active_firmware: '3.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '5.0'
+            vendor_date: '2020-09-17'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DMQ8811A-EC03
+            vendor_rev: '02'
+            vendor_sn: UW4D2G00001
+            dual_bank_support: no

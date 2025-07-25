@@ -1,0 +1,49 @@
+# transceiver_static_info.yaml
+#
+# A file transceiver_static_info.yaml should be present to describe the metadata of the transceiver.
+# Following should be the format of the file
+#    topology:
+#        <device_name>:
+#            <port_name>:
+#                active_firmware: <active_firmware_version>
+#                inactive_firmware: <inactive_firmware_version>
+#                cmis_rev: <cmis_revision>
+#                vendor_date: <vendor_date_code>
+#                vendor_name: <vendor_name>
+#                vendor_oui: <vendor_oui>
+#                vendor_pn: <part_number>
+#                vendor_rev: <revision_number>
+#                vendor_sn: <serial_number>
+#                dual_bank_support: <yes_or_no>
+#
+topology:
+    Cisco-8101-O8C48:
+        Ethernet32:
+            # 2x200G AOC (400G end, connected to 200G A)
+            active_firmware: '2.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '5.2'
+            vendor_date: '2024-09-29'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DME8811-EC03-MB2
+            vendor_rev: '01'
+            vendor_sn: VSZE9Z5001A
+            dual_bank_support: yes
+            #firmware_valid_image_ver: '2.0.0'
+            #firmware_valid_image: 'hisense_200g400g_aoc_fw_msft_v2p0.bin'
+            firmware_valid_image_ver: '82.0.0'
+            firmware_valid_image: 'hisense_200g400g_aoc_fw_msft_v82p0.bin'
+
+        Ethernet36:
+            # 2x200G AOC (400G end, connected to 200G B)
+            active_firmware: '2.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '5.2'
+            vendor_date: '2024-09-29'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DME8811-EC03-MB2
+            vendor_rev: '01'
+            vendor_sn: VSZE9Z5001A
+            dual_bank_support: no

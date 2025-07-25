@@ -1,0 +1,71 @@
+# transceiver_static_info.yaml
+#
+# A file transceiver_static_info.yaml should be present to describe the metadata of the transceiver.
+# Following should be the format of the file
+#    topology:
+#        <device_name>:
+#            <port_name>:
+#                active_firmware: <active_firmware_version>
+#                inactive_firmware: <inactive_firmware_version>
+#                cmis_rev: <cmis_revision>
+#                vendor_date: <vendor_date_code>
+#                vendor_name: <vendor_name>
+#                vendor_oui: <vendor_oui>
+#                vendor_pn: <part_number>
+#                vendor_rev: <revision_number>
+#                vendor_sn: <serial_number>
+#                dual_bank_support: <yes_or_no>
+#
+topology:
+    Arista-7050CX3-32S-C32:
+        Ethernet0:
+            # 2x100G AOC (100G end A)
+            active_firmware: '0.5.0'    # CLI format, CDB 0100h (x.y.zzzz]
+            inactive_firmware: '9.3.0'  # CLI format, CDB 0100h (x.y.zzzz]
+            cmis_rev: '5.2'             # CLI format (5.2)
+            vendor_date: '2023-11-20'   # CLI format
+            vendor_name: Hisense        # how to do spaces in YAML? (e.g. "Hisense BB")
+            vendor_oui: ac-4a-fe        # CLI format (ac-4a-fe)
+            vendor_pn: DEF8504-2C02-MB3
+            vendor_rev: '02'
+            vendor_sn: VEMDBT0200A-A
+            dual_bank_support: no
+
+        Ethernet4:
+            # 2x100G AOC (100G end B)
+            active_firmware: '0.5.0'    # CLI format, CDB 0100h (x.y.zzzz]
+            inactive_firmware: '9.3.0'  # CLI format, CDB 0100h (x.y.zzzz]
+            cmis_rev: '5.2'             # CLI format (5.2)
+            vendor_date: '2023-11-20'   # CLI format
+            vendor_name: Hisense        # how to do spaces in YAML? (e.g. "Hisense BB")
+            vendor_oui: ac-4a-fe        # CLI format (ac-4a-fe)
+            vendor_pn: DEF8504-2C02-MB3
+            vendor_rev: '02'
+            vendor_sn: VEMDBT0200A-B
+            dual_bank_support: no
+
+        Ethernet64:
+            # 100G AOC (SFF-xxxx)
+            active_firmware: '0.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '0.0'
+            vendor_date: '2020-05-22'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DQF8503-4C03
+            vendor_rev: '11'
+            vendor_sn: S51A5UB304B
+            dual_bank_support: no
+
+        Ethernet68:
+            # 100G AOC (SFF-xxxx)
+            active_firmware: '0.0.0'
+            inactive_firmware: '0.0.0'
+            cmis_rev: '0.0'
+            vendor_date: '2020-05-22'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: DQF8503-4C03
+            vendor_rev: '11'
+            vendor_sn: S51A5UB304C
+            dual_bank_support: no

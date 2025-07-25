@@ -1,0 +1,49 @@
+# transceiver_static_info.yaml
+#
+# A file transceiver_static_info.yaml should be present to describe the metadata of the transceiver.
+# Following should be the format of the file
+#    topology:
+#        <device_name>:
+#            <port_name>:
+#                active_firmware: <active_firmware_version>
+#                inactive_firmware: <inactive_firmware_version>
+#                cmis_rev: <cmis_revision>
+#                vendor_date: <vendor_date_code>
+#                vendor_name: <vendor_name>
+#                vendor_oui: <vendor_oui>
+#                vendor_pn: <part_number>
+#                vendor_rev: <revision_number>
+#                vendor_sn: <serial_number>
+#                dual_bank_support: <yes_or_no>
+#
+topology:
+    Cisco-8101-O8C48:
+        Ethernet128:
+            # 400ZR, DWDM, amplified
+            active_firmware: '1.3.0'
+            inactive_firmware: '1.3.0'
+            cmis_rev: '5.1'
+            vendor_date: '2024-01-06'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: 'LCQ638BS-PC+'
+            vendor_rev: '01'
+            vendor_sn: 'V83E1G00008'
+            dual_bank_support: no   # (actually yes)
+            #firmware_valid_image_ver: '1.3.0'
+            #firmware_valid_image: 'xxxxxx.bin'
+
+        Ethernet144:
+            # 400ZR, DWDM, amplified
+            active_firmware: '1.3.0'
+            inactive_firmware: '1.3.0'
+            cmis_rev: '5.1'
+            vendor_date: '2024-01-06'
+            vendor_name: Hisense
+            vendor_oui: ac-4a-fe
+            vendor_pn: LCQ638BS-PC+
+            vendor_rev: '01'
+            vendor_sn: 'V83E1G00010'
+            dual_bank_support: no   # (actually yes)
+            #firmware_valid_image_ver: '1.3.0'
+            #firmware_valid_image: 'xxxxxx.bin'
