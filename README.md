@@ -35,7 +35,7 @@ root@sonic:/home/admin/testcode_dmq8811_012225# show interfaces transceiver eepr
    ```
   
 ```text
-Platform & fireware info
+Platform & fireware info:
 
 root@sonic:/home/admin/testcode_dmq8811_012225# show platform firmware status
 Chassis     Module   Component   Version    Description
