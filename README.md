@@ -15,7 +15,7 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
     |                 |
     +-----------------+
    ```
-   ```text
+
   optical transceiver info：       
             400G AOC - updated for 2-bank
             active_firmware: '4.3.0'
