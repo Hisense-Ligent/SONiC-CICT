@@ -14,7 +14,7 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
     |          Port 14|<----+
     |                 |
     +-----------------+
-    ```
+   ```
    ```text
   optical transceiver info：       
             400G AOC - updated for 2-bank
@@ -31,7 +31,7 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
             #firmware_valid_image_ver: '4.3.0'
             #firmware_valid_image: '400g_aoc_dmq8811a-ec+for_msft_sonic_v4p3.bi
     ```
-```text
+    ```text
 root@sonic:/home/admin/testcode_dmq8811_012225# show platform firmware status
 Chassis     Module   Component   Version    Description
 ------------------------------------------------------
@@ -41,6 +41,6 @@ TAM         N/A      2.6        TAM FW - x86
 SSD         N/A      11.32      SSD
 IOFPGA      N/A      1.10       Omega FPGA - Xilinx
 eCPLD       N/A      1.9        Power CPLD
-```
+    ```
 
 
