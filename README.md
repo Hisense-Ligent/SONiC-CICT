@@ -30,6 +30,7 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
             dual_bank_support: yes
             #firmware_valid_image_ver: '4.3.0'
             #firmware_valid_image: '400g_aoc_dmq8811a-ec+for_msft_sonic_v4p3.bi
+   ```
   
 ```text
 Platform & fireware info
