@@ -1,0 +1,122 @@
+root@sonic:/home/admin/testcode_dmq8811_012225# cp transceiver_static_info_MSFT400GAOC.yaml transceiver_static_info.yaml
+root@sonic:/home/admin/testcode_dmq8811_012225# sudo -s
+root@sonic:/home/admin/testcode_dmq8811_012225# python
+
+>>> from test_show import *
+>>>
+>>> test_the_tests()
+test_the_tests BEGIN
+util_wrapper_init done
+test_check_show_transceiver_info  Ethernet96  done
+test_check_show_transceiver_info  Ethernet104  done
+test_check_transceiver_dom  Ethernet96  done
+test_check_transceiver_dom  Ethernet104  done
+test_check_transceiver_status  Ethernet96  done
+test_check_transceiver_status  Ethernet104  done
+test_check_transceiver_C_CMIS  Ethernet96  Skipped (not CMIS/Coherent)
+test_check_transceiver_C_CMIS  Ethernet104  Skipped (not CMIS/Coherent)
+test_check_transceiver_VDM : TBD
+test_check_transceiver_error_status  Ethernet96  done
+test_check_transceiver_error_status  Ethernet104  done
+test_the_tests END
+>>>
+
+>>> from test_sfputil import *
+>>>
+>>> test_the_sfputil_tests()
+test_the_tests BEGIN
+util_wrapper_init done
+test_check_sfputil_transceiver_presence  Ethernet96  done
+test_check_sfputil_transceiver_presence  Ethernet104  done
+test_check_sfputil_transceiver_reset  Ethernet96  done
+test_check_sfputil_transceiver_reset  Ethernet104  done
+test_check_sfputil_transceiver_lpmode  Ethernet96  done
+test_check_sfputil_transceiver_lpmode  Ethernet104  done
+test_check_sfputil_transceiver_eeprom  Ethernet96  done
+test_check_sfputil_transceiver_eeprom  Ethernet104  done
+test_check_sfputil_transceiver_dom  Ethernet96  done
+test_check_sfputil_transceiver_dom  Ethernet104  done
+test_check_sfputil_transceiver_eeprom_hexdump  Ethernet96  done
+test_check_sfputil_transceiver_eeprom_hexdump  Ethernet104  done
+test_check_sfputil_transceiver_fw_version  Ethernet96  done
+test_check_sfputil_transceiver_fw_version  Ethernet104  done
+test_check_sfputil_transceiver_loopback  Ethernet96  Skipped (N/A)
+test_check_sfputil_transceiver_loopback  Ethernet104  Skipped (N/A)
+test_the_tests END
+>>>
+
+>>> from test_remote_reseat import *
+>>>
+>>> test_the_remote_reseat_tests()
+test_the_remote_reseat_tests BEGIN
+util_wrapper_init done
+test_the_remote_reseat_tests  Ethernet96  done
+test_the_remote_reseat_tests  Ethernet104  done
+test_the_remote_reseat_tests END
+>>>
+
+>>> from test_link import *
+>>>
+>>> test_the_link_status_tests()
+test_the_link_status_tests BEGIN
+util_wrapper_init done
+test_check_link_status  Ethernet96  done
+test_check_link_status  Ethernet104  done
+test_check_stress_link_status start (2 ports, 5 loops)
+test_check_stress_link_status loop 0...
+test_check_stress_link_status loop 1...
+test_check_stress_link_status loop 2...
+test_check_stress_link_status loop 3...
+test_check_stress_link_status loop 4...
+test_check_stress_link_status (2 ports, 4 loops) done
+test_the_link_status_tests END
+>>>
+
+>>> from test_firmware import *
+>>>
+>>> test_the_fw_tests()
+test_the_fw_tests BEGIN
+util_wrapper_init done
+DBG test_download_valid_fw  Ethernet96  download start
+DBG test_download_valid_fw  Ethernet96  download end
+test_download_valid_fw  Ethernet96  done
+test_cfg_fw_img_path(Cisco-8101-O8C48, Ethernet104): no image path
+test_download_valid_fw  Ethernet104  Skipped (no FW image)
+test_the_fw_tests END
+>>>
+
+
+//
+// Examples of test failure
+//
+
+>>> test_the_fw_tests()
+test_the_fw_tests BEGIN
+util_wrapper_init done
+DBG test_download_valid_fw  Ethernet96  download start
+DBG test_download_valid_fw  Ethernet96  download end
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/admin/testcode_dmq8811_012225/test_firmware.py", line 922, in test_the_fw_tests
+    test_download_valid_fw(my_duthosts, my_enum_rand_one_per_hwsku_frontend_hostname,
+  File "/home/admin/testcode_dmq8811_012225/test_firmware.py", line 284, in test_download_valid_fw
+    assert curr_flaps == orig_flaps, '%u link flaps' % (curr_flaps - orig_flaps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 link flaps
+>>>
+
+>>> test_the_fw_tests()
+test_the_fw_tests BEGIN
+util_wrapper_init done
+waiting 20s before killing download..
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/admin/testcode_dmq8811_012225/test_firmware.py", line 925, in test_the_fw_tests
+    test_download_kill(my_duthosts, my_enum_rand_one_per_hwsku_frontend_hostname,
+  File "/home/admin/testcode_dmq8811_012225/test_firmware.py", line 381, in test_download_kill
+    assert curr_inactive and curr_inactive == '0.0.0'
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+>>>
+
+//---------------------------------------------------------------------------
