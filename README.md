@@ -16,7 +16,9 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
     +-----------------+
    ```
 
-  optical transceiver info：       
+ optical transceiver info：
+
+root@sonic:/home/admin/testcode_dmq8811_012225# show interfaces transceiver eeprom -d Ethernet0       
             400G AOC - updated for 2-bank
             active_firmware: '4.3.0'
             inactive_firmware: '4.2.0'
