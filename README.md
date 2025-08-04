@@ -6,7 +6,8 @@ A total of 2 ports of a device with the onboarding transceiver should be connect
 
  Standalone topology with both ports connected on the same SONiC device (self loopback/SONIC.202405)
 
-    ```text
+    ```
+    Topology
     +-----------------+
     |          Port 13|<----+
     |                 |     | Loopback
